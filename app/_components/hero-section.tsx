@@ -13,8 +13,9 @@ export const HeroSection = () => {
           autoPlay
           loop
           muted
+          controls={false}
         />
-        <span className="absolute inset-0 bg-foreground/40" />
+        <span className="absolute inset-0 bg-foreground/10" />
       </div>
       <div className="w-full h-fit items-start justify-start flex flex-col gap-y-10 lg:gap-y-14 z-[2]">
         <div className="w-full h-fit items-start justify-start flex flex-col gap-y-1.5 lg:gap-y-3">

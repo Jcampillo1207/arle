@@ -13,7 +13,9 @@ export const Section3 = () => {
           exigencias de calidad.
         </p>
       </div>
-      <div className="w-full h-fit items-start justify-start flex flex-col"></div>
+      <div className="w-full h-fit items-start justify-start flex flex-col">
+        
+      </div>
     </section>
   );
 };
