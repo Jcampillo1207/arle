@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const HeroSection = () => {
   return (
-    <section className="w-full h-fit grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-10 xl:gap-14 py-10 lg:py-14 xl:py-24 px-5 md:px-7 lg:px-14 xl:px-36 2xl:px-52 relative">
+    <section className="w-full h-fit grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-10 xl:gap-14 py-20 lg:py-24 xl:py-28 2xl:py-36 px-5 md:px-7 lg:px-14 xl:px-36 relative">
       <div className="absolute inset-0 overflow-hidden z-[1]">
         <VideoOptimizado
           poster="/hero-poster.png"
