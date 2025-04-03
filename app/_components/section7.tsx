@@ -30,7 +30,7 @@ export const Section7 = () => {
       <div className="w-full h-fit grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-7">
         <Link
           href={"/project"}
-          className="w-full flex-1 grid grid-cols-[30%_1fr] gap-4 hover:bg-muted/50 border border-transparent hover:border-border ease-in-out transition-all duration-300"
+          className="w-full flex-1 grid grid-cols-1 lg:grid-cols-[30%_1fr] gap-4 hover:bg-muted/50 border border-transparent hover:border-border ease-in-out transition-all duration-300"
         >
           <div className="flex flex-col gap-y-4 items-start justify-between flex-1 p-3">
             <div className="w-full h-fit items-start justify-start flex flex-col gap-y-2">
@@ -64,7 +64,7 @@ export const Section7 = () => {
         </Link>
         <Link
           href={"/project"}
-          className="w-full flex-1 grid grid-cols-[30%_1fr] gap-4 hover:bg-muted/50 border border-transparent hover:border-border ease-in-out transition-all duration-300"
+          className="w-full flex-1 grid grid-cols-1 lg:grid-cols-[30%_1fr] gap-4 hover:bg-muted/50 border border-transparent hover:border-border ease-in-out transition-all duration-300"
         >
           <div className="flex flex-col gap-y-4 items-start justify-between flex-1 p-3">
             <div className="w-full h-fit items-start justify-start flex flex-col gap-y-2">
