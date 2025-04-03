@@ -16,7 +16,6 @@ import {
   LucideIcon,
   MessageSquare,
   PenTool,
-  Plus,
   ShieldCheck,
   Thermometer,
   Truck,

@@ -1,7 +1,7 @@
 import { MexicoMap } from "@/components/mexico-map";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Building, MapPinHouse } from "lucide-react";
+import { ArrowRight, MapPinHouse } from "lucide-react";
 import Link from "next/link";
 
 export const Section5 = () => {
