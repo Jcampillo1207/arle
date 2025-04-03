@@ -17,12 +17,6 @@ const ScrollVideo: React.FC<ScrollVideoProps> = ({
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [containerHeight, setContainerHeight] = useState("400vh");
-  const [videoEnded, setVideoEnded] = useState(false);
-
-  const onVideoEnd = () => {
-    setVideoEnded(true);
-  };
-
   useEffect(() => {
     let lastScroll = window.scrollY;
 
@@ -54,7 +48,6 @@ const ScrollVideo: React.FC<ScrollVideoProps> = ({
           (videoRef.current.currentTime > targetTime && scrollPos < lastScroll)
         ) {
           videoRef.current.currentTime = targetTime;
-          setVideoEnded(false);
         }
       }
 
@@ -104,7 +97,6 @@ const ScrollVideo: React.FC<ScrollVideoProps> = ({
         controls={false}
         autoPlay
         ref={videoRef}
-        onEnded={onVideoEnd}
         style={{
           position: "sticky",
           top: belowNav ? "56px" : "0",
