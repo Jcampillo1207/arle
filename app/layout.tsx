@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html className="scroll-smooth" lang="es" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased tracking-tight`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased selection:text-primary selection:bg-primary/5`}
       >
         <Header />
         {children}

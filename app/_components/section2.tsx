@@ -50,7 +50,7 @@ export const Section2 = () => {
   ];
 
   return (
-    <section className="w-full h-fit items-start justify-start flex flex-col px-5 md:px-7 lg:px-14 xl:px-36 2xl:px-52 py-20 md:py-24 lg:py-28 gap-y-10 lg:gap-y-14">
+    <section id="services" className="w-full h-fit scroll-mt-14 items-start justify-start flex flex-col px-5 md:px-7 lg:px-14 xl:px-36 2xl:px-52 py-20 md:py-24 lg:py-28 gap-y-10 lg:gap-y-14">
       <div className="w-full h-fit items-start justify-start flex flex-col">
         <Carousel
           opts={{

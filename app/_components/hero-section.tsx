@@ -15,11 +15,11 @@ export const HeroSection = () => {
           muted
           controls={false}
         />
-        <span className="absolute inset-0 bg-foreground/10" />
+        <span className="absolute inset-0 bg-foreground/15" />
       </div>
       <div className="w-full h-fit items-start justify-start flex flex-col gap-y-10 lg:gap-y-14 z-[2]">
-        <div className="w-full h-fit items-start justify-start flex flex-col gap-y-1.5 lg:gap-y-3">
-          <h1 className="text-5xl lg:text-5xl 2xl:text-6xl font-semibold text-background">
+        <div className="w-full h-fit items-start justify-start flex flex-col gap-y-1.5 lg:gap-y-3 drop-shadow-md">
+          <h1 className="text-5xl lg:text-5xl 2xl:text-6xl font-semibold text-background tracking-tight">
             Tu aliado en cada etapa de la construcción
           </h1>
           <p className="text-base lg:text-lg text-background/80 font-medium">
@@ -30,7 +30,7 @@ export const HeroSection = () => {
         </div>
         <div className="w-full h-fit items-center justify-start flex gap-2">
           <Button variant={"default"} asChild>
-            <Link href={"/services"}>
+            <Link href={"/#services"}>
               Nuestros servicios <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
