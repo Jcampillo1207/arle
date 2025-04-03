@@ -1,3 +1,4 @@
+import { BlurFade } from "@/components/magicui/blur-fade";
 import { Button } from "@/components/ui/button";
 import {
   Activity,
@@ -115,41 +116,48 @@ export const Section3 = () => {
   ];
 
   return (
-    <section className="w-full h-fit items-start justify-start flex flex-col px-5 md:px-7 lg:px-14 xl:px-36 2xl:px-52 py-20 md:py-24 lg:py-28 gap-y-10 lg:gap-y-14 bg-muted border-t">
+    <section className="w-full h-fit items-start justify-start flex flex-col px-5 md:px-7 lg:px-14 xl:px-36 2xl:pl-56 py-20 md:py-24 lg:py-28 gap-y-10 lg:gap-y-14 bg-muted border-t">
       <div className="w-full h-fit items-start justify-start flex flex-col gap-y-7 lg:gap-y-10">
         <div className="w-full max-w-2xl items-starts justify-start flex flex-col gap-y-1.5">
-          <h2 className="text-3xl md:text-3xl xl:text-4xl font-semibold text-foreground tracking-tight">
-            <span className="text-primary">##</span> Sobresaliente calidad en
-            nuestro trabajo
-          </h2>
-          <p className="text-sm lg:text-base text-muted-foreground">
-            En cada proyecto que desarrollamos, fusionamos experiencia técnica,
-            compromiso y pasión por construir con excelencia. Nuestro equipo
-            garantiza resultados sólidos, duraderos y alineados a las más altas
-            exigencias de calidad.
-          </p>
+          <BlurFade inView delay={0}>
+            <h2 className="text-3xl md:text-3xl xl:text-4xl font-semibold text-foreground tracking-tight">
+              <span className="text-primary">##</span> Sobresaliente calidad en
+              nuestro trabajo
+            </h2>
+          </BlurFade>
+          <BlurFade inView delay={0.1}>
+            <p className="text-sm lg:text-base text-muted-foreground">
+              En cada proyecto que desarrollamos, fusionamos experiencia
+              técnica, compromiso y pasión por construir con excelencia. Nuestro
+              equipo garantiza resultados sólidos, duraderos y alineados a las
+              más altas exigencias de calidad.
+            </p>
+          </BlurFade>
         </div>
         <div className="w-full h-fit items-center justify-start flex gap-2">
-          <Button variant={"default"} asChild>
-            <Link href={"/contact"}>
-              Contáctanos <ArrowRight className="h-4 w-4" />
-            </Link>
-          </Button>
+          <BlurFade inView delay={0.3}>
+            <Button variant={"default"} asChild>
+              <Link href={"/contact"}>
+                Contáctanos <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Button>
+          </BlurFade>
         </div>
       </div>
       <div className="w-full h-fit items-start justify-start flex-wrap gap-2 hidden lg:flex">
         {items.map((item, index) => (
-          <div
-            key={index}
-            className="flex items-center gap-x-2 text-sm bg-background border p-1 pr-3 rounded-none"
-          >
-            <div className="p-2 bg-primary/10 text-primary">
-              <item.icon className="size-4" />
+          <BlurFade key={index} inView delay={0.3 + index * 0.1}>
+            <div
+              className="flex items-center gap-x-2 text-sm bg-background border p-1 pr-3 rounded-none"
+            >
+              <div className="p-2 bg-primary/10 text-primary">
+                <item.icon className="size-4" />
+              </div>
+              <p className="text-muted-foreground tracking-normal">
+                {item.title}
+              </p>
             </div>
-            <p className="text-muted-foreground tracking-normal">
-              {item.title}
-            </p>
-          </div>
+          </BlurFade>
         ))}
       </div>
       <div className="w-full h-fit items-start justify-start flex-col gap-1 flex lg:hidden">

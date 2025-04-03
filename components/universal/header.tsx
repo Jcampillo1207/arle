@@ -12,7 +12,7 @@ import {
 
 export const Header = () => {
   return (
-    <header className="w-full h-14 items-center justify-between flex py-3 px-5 md:px-7 lg:px-14 xl:px-36 2xl:px-52 border-b bg-background sticky top-0 z-10">
+    <header className="w-full h-14 items-center justify-between flex py-3 px-5 md:px-7 lg:px-14 xl:px-36 2xl:pl-56 border-b bg-background sticky top-0 z-10">
       <Link href="/" className="h-full w-auto">
         <Logo />
       </Link>
