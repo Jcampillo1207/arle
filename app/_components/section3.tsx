@@ -118,7 +118,7 @@ export const Section3 = () => {
     <section className="w-full h-fit items-start justify-start flex flex-col px-5 md:px-7 lg:px-14 xl:px-36 2xl:px-52 py-20 md:py-24 lg:py-28 gap-y-10 lg:gap-y-14 bg-muted border-t">
       <div className="w-full h-fit items-start justify-start flex flex-col gap-y-7 lg:gap-y-10">
         <div className="w-full max-w-2xl items-starts justify-start flex flex-col gap-y-1.5">
-          <h2 className="text-2xl md:text-3xl xl:text-4xl font-semibold text-foreground tracking-tight">
+          <h2 className="text-3xl md:text-3xl xl:text-4xl font-semibold text-foreground tracking-tight">
             <span className="text-primary">##</span> Sobresaliente calidad en
             nuestro trabajo
           </h2>
@@ -132,7 +132,7 @@ export const Section3 = () => {
         <div className="w-full h-fit items-center justify-start flex gap-2">
           <Button variant={"default"} asChild>
             <Link href={"/contact"}>
-              Contáctanos <ArrowRight className="ml-2 h-4 w-4" />
+              Contáctanos <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>
         </div>

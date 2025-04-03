@@ -9,7 +9,7 @@ export const Section5 = () => {
     <section className="w-full h-fit grid grid-cols-1 lg:grid-cols-2 px-5 md:px-7 lg:px-14 xl:px-36 2xl:px-52 py-20 md:py-24 lg:py-28 gap-10 lg:gap-14 bg-muted border-t">
       <div className="w-full flex-1 items-start justify-center flex flex-col gap-y-10 lg:gap-y-14">
         <div className="w-full items-starts justify-start flex flex-col gap-y-1.5">
-          <h2 className="text-2xl md:text-3xl xl:text-4xl font-semibold text-foreground tracking-tight">
+          <h2 className="text-3xl md:text-3xl xl:text-4xl font-semibold text-foreground tracking-tight">
             <span className="text-primary">##</span> Cobertura nacional de todos
             nuestros servicios
           </h2>
@@ -36,7 +36,7 @@ export const Section5 = () => {
         <div className="w-full h-fit items-center justify-start flex gap-2">
           <Button variant={"default"} asChild>
             <Link href={"/contact"}>
-              Contáctanos <ArrowRight className="ml-2 h-4 w-4" />
+              Contáctanos <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>
           <Button variant={"ghost"} asChild className="hover:bg-background">
@@ -44,7 +44,7 @@ export const Section5 = () => {
           </Button>
         </div>
       </div>
-      <div className="flex-1 flex bg-background border aspect-square relative overflow-hidden bg-blue-50">
+      <div className="flex-1 flex bg-background border aspect-square relative overflow-hidden bg-blue-100">
         <MexicoMap />
       </div>
     </section>

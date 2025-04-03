@@ -74,7 +74,7 @@ export const Section4 = () => {
     <section className="w-full h-fit items-start justify-start flex flex-col py-20 md:py-24 lg:py-28 gap-y-10 lg:gap-y-14 border-t">
       <div className="px-5 md:px-7 lg:px-14 xl:px-36 2xl:px-52 flex flex-col w-full gap-y-7 lg:gap-y-10">
         <div className="w-full max-w-2xl items-starts justify-start flex flex-col gap-y-1.5">
-          <h2 className="text-2xl md:text-3xl xl:text-4xl font-semibold text-foreground tracking-tight">
+          <h2 className="text-3xl md:text-3xl xl:text-4xl font-semibold text-foreground tracking-tight">
             <span className="text-primary">##</span> Lo que nuestros clientes
             dicen
           </h2>
@@ -88,7 +88,7 @@ export const Section4 = () => {
         <div className="w-full h-fit items-center justify-start flex gap-2">
           <Button variant={"default"} asChild>
             <Link href={"/contact"}>
-              Contáctanos <ArrowRight className="ml-2 h-4 w-4" />
+              Contáctanos <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>
         </div>

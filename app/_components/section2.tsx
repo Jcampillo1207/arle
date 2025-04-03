@@ -60,7 +60,7 @@ export const Section2 = () => {
         >
           <div className="w-full flex items-end justify-between">
             <div className="w-full max-w-2xl items-starts justify-start flex flex-col gap-y-1.5">
-              <h2 className="text-2xl md:text-3xl xl:text-4xl font-semibold text-foreground">
+              <h2 className="text-3xl md:text-3xl xl:text-4xl font-semibold text-foreground">
                 <span className="text-primary">##</span> Conoce nuestros
                 servicios
               </h2>
