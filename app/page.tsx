@@ -1,4 +1,3 @@
-import ScrollVideo from "@/components/scroll-video";
 import { HeroSection } from "./_components/hero-section";
 import { Section2 } from "./_components/section2";
 import { Section3 } from "./_components/section3";
@@ -16,11 +15,6 @@ export default function Home() {
       <Section3 />
       <Section4 />
       <Section5 />
-      {/* <ScrollVideo
-        src="/cv-se.mp4"
-        heightPerSecond={1300}
-        belowNav={true}
-      /> */}
       <Section6 />
       <Section7 />
       <Section8 />
