@@ -34,7 +34,7 @@ export const Section7 = () => {
           </BlurFade>
         </div>
       </div>
-      <div className="w-full h-fit grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-7">
+      <div className="w-full h-fit grid grid-cols-1 lg:grid-cols-2 gap-4">
         <BlurFade inView delay={0.3}>
           <Link
             href={"/project"}

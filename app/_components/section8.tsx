@@ -10,7 +10,7 @@ export const Section8 = () => {
         <div className="w-full max-w-4xl items-center justify-center flex flex-col gap-y-1.5">
           <BlurFade inView delay={0}>
             <h2 className="text-4xl md:text-4xl xl:text-5xl font-semibold text-foreground tracking-tight text-center">
-              Comienza tu próximo gran proyecto con un equipo que construye
+              <span className="text-primary">#</span>{" "}Comienza tu próximo gran proyecto con un equipo que construye
               confianza y calidad
             </h2>
           </BlurFade>
