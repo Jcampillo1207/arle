@@ -73,7 +73,7 @@ export const Section9 = () => {
   return (
     <section
       id="services"
-      className="w-full h-fit scroll-mt-14 items-start justify-start flex flex-col px-5 md:px-7 lg:px-14 xl:px-36 2xl:pl-56 py-20 md:py-24 lg:py-28 gap-y-10 lg:gap-y-14 border-t"
+      className="w-full h-fit scroll-mt-14 items-start justify-start flex flex-col px-5 md:px-7 lg:px-14 xl:px-36 2xl:px-56 py-20 md:py-24 lg:py-28 gap-y-10 lg:gap-y-14 border-t"
     >
       <div className="w-full h-fit items-start justify-start flex flex-col gap-y-7 lg:gap-y-10">
         <div className="w-full max-w-2xl items-starts justify-start flex flex-col gap-y-1.5">

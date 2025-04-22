@@ -6,7 +6,7 @@ import Link from "next/link";
 export const Section6 = () => {
   return (
     <section className="w-full bg-primary grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-14 relative">
-      <div className="w-full flex-1 items-start justify-center flex flex-col gap-y-7 lg:gap-y-10 py-20 md:py-24 lg:py-28 px-5 md:px-7 lg:px-0 lg:pl-14 xl:pl-36 2xl:pl-56">
+      <div className="w-full flex-1 items-start justify-center flex flex-col gap-y-7 lg:gap-y-10 py-20 md:py-24 lg:py-28 px-5 md:px-7 lg:px-0 lg:pl-14 xl:pl-36 2xl:px-56">
         <div className="w-full flex flex-col gap-y-1.5 items-start justify-start">
           <BlurFade inView delay={0}>
             <h2 className="text-3xl md:text-3xl xl:text-4xl font-semibold text-background tracking-tight">

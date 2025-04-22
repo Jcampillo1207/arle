@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export const Section5 = () => {
   return (
-    <section className="w-full h-fit grid grid-cols-1 lg:grid-cols-2 px-5 md:px-7 lg:px-14 xl:px-36 2xl:pl-56 py-20 md:py-24 lg:py-28 gap-10 lg:gap-14 bg-muted border-t">
+    <section className="w-full h-fit grid grid-cols-1 lg:grid-cols-2 px-5 md:px-7 lg:px-14 xl:px-36 2xl:px-56 py-20 md:py-24 lg:py-28 gap-10 lg:gap-14 bg-muted border-t">
       <div className="w-full flex-1 items-start justify-center flex flex-col gap-y-10 lg:gap-y-14">
         <div className="w-full items-starts justify-start flex flex-col gap-y-1.5">
           <BlurFade inView delay={0}>

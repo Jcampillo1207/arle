@@ -87,17 +87,17 @@ export const Section10 = () => {
   return (
     <section
       id="contact"
-      className="w-full h-fit scroll-mt-14 items-center justify-center flex flex-col px-5 md:px-7 lg:px-14 xl:px-36 2xl:pl-56 py-20 md:py-24 lg:py-28 gap-y-10 lg:gap-y-14 border-t bg-muted"
+      className="w-full h-fit scroll-mt-14 items-start justify-start grid grid-cols-1 lg:grid-cols-2 px-5 md:px-7 lg:px-14 xl:px-36 2xl:px-56 py-20 md:py-24 lg:py-28 gap-y-10 lg:gap-y-14 border-t bg-muted"
     >
-      <div className="w-full max-w-2xl mx-auto items-center justify-center flex flex-col gap-y-1.5">
+      <div className="w-full max-w-2xl mx-auto items-start justify-start flex flex-col gap-y-1.5">
         <BlurFade inView delay={0}>
-          <h2 className="text-3xl md:text-3xl xl:text-4xl font-semibold text-foreground text-center">
+          <h2 className="text-3xl md:text-3xl xl:text-4xl font-semibold text-foreground">
             <span className="text-primary">##</span> Hablemos de tu próximo
             proyecto
           </h2>
         </BlurFade>
         <BlurFade inView delay={0.1}>
-          <p className="text-sm lg:text-base text-muted-foreground text-center">
+          <p className="text-sm lg:text-base text-muted-foreground">
             Estamos listos para escucharte y ayudarte a convertir tus ideas en
             realidad. Completa el formulario y uno de nuestros especialistas se
             pondrá en contacto contigo para comenzar a planear cada detalle.
