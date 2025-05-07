@@ -12,22 +12,56 @@ import {
   SheetTrigger,
 } from "../ui/sheet";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
 export const Header = () => {
-
   const pathname = usePathname();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Logic to detect if the screen has scrolled
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    // Add event listener when component mounts
+    window.addEventListener("scroll", handleScroll);
+
+    // Check initial position
+    handleScroll();
+
+    // Clean up event listener when component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <header className="w-full h-14 items-center justify-between flex py-3 px-5 md:px-7 lg:px-14 xl:px-36 2xl:px-56 border-b bg-background sticky top-0 z-10">
+    <header
+      className={cn(
+        "w-full h-14 items-center justify-between flex py-3 px-5 md:px-7 border-b border-transparent lg:px-14 xl:px-36 2xl:px-56 fixed top-0 z-10",
+        "transition-all duration-300 ease-in-out",
+        isScrolled && "shadow-md border-border bg-background"
+      )}
+    >
       <Link href="/" className="h-full w-auto">
-        <Logo />
+        <Logo variant={isScrolled ? "black" : "white"} />
       </Link>
       <div className="w-fit h-full hidden gap-x-1 items-center justify-end lg:flex">
         <Button
           asChild
           variant={pathname.startsWith("/about") ? "secondary" : "ghost"}
           size={"default"}
-          className="font-medium"
+          className={cn(
+            "font-medium",
+            !isScrolled && !pathname.startsWith("/about") && "text-background"
+          )}
         >
           <Link href={"/about"}>Nosotros</Link>
         </Button>
@@ -35,7 +69,12 @@ export const Header = () => {
           asChild
           variant={pathname.startsWith("/services") ? "secondary" : "ghost"}
           size={"default"}
-          className="font-medium"
+          className={cn(
+            "font-medium",
+            !isScrolled &&
+              !pathname.startsWith("/services") &&
+              "text-background"
+          )}
         >
           <Link href={"/services"}>Servicios</Link>
         </Button>
@@ -43,7 +82,10 @@ export const Header = () => {
           asChild
           variant={pathname.startsWith("/contact") ? "secondary" : "default"}
           size={"default"}
-          className="font-medium"
+          className={cn(
+            "font-medium",
+            !isScrolled && !pathname.startsWith("/contact") && "text-background"
+          )}
         >
           <Link href={"/contact"}>
             Contáctanos <ArrowRight />
@@ -53,7 +95,11 @@ export const Header = () => {
       <div className="w-fit h-full flex gap-x-1 items-center justify-end lg:hidden">
         <Sheet>
           <SheetTrigger asChild>
-            <Button variant={"ghost"} size={"icon"}>
+            <Button
+              variant={"ghost"}
+              className={cn(!isScrolled && "text-foreground bg-background")}
+              size={"icon"}
+            >
               <Menu />
             </Button>
           </SheetTrigger>

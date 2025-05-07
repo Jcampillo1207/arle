@@ -56,7 +56,7 @@ export const Section5 = () => {
         </div>
       </div>
       <BlurFade inView delay={0.5}>
-        <div className="flex-1 flex bg-background border aspect-square relative overflow-hidden bg-blue-100">
+        <div className="flex-1 flex bg-background border aspect-square relative overflow-hidden bg-white">
           <MexicoMap />
         </div>
       </BlurFade>

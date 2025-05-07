@@ -1,9 +1,13 @@
+import { HeroContact } from "./_components/hero-contact";
+import { Section2Contact } from "./_components/section2-contact";
+
 const ContactPage = () => {
-    return ( 
-        <main>
-            <h1>Contact</h1>
-        </main>
-     );
-}
- 
+  return (
+    <main className="w-full h-fit items-start justify-start flex flex-col">
+      <HeroContact />
+      <Section2Contact />
+    </main>
+  );
+};
+
 export default ContactPage;

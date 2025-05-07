@@ -1,5 +1,5 @@
 import { BlurFade } from "@/components/magicui/blur-fade";
-import Image from "next/image";
+import { Video } from "@/components/video-optimized";
 
 export const Section2About = () => {
   return (
@@ -25,11 +25,13 @@ export const Section2About = () => {
       </div>
       <BlurFade inView delay={0.2}>
         <div className="flex-1 aspect-[4/3] relative w-full">
-          <Image
-            src="/executive-projects.png"
-            alt="About"
-            fill
-            className="object-cover"
+          <Video
+            poster="/video-about-2-poster.png"
+            src="/video-about-2.mp4"
+            autoPlay
+            loop
+            muted
+            controls={true}
           />
         </div>
       </BlurFade>

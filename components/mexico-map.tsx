@@ -4,7 +4,6 @@ import {
   Geographies,
   Geography,
   Marker,
-  ZoomableGroup,
 } from "react-simple-maps";
 
 // Define the Point type to match react-simple-maps expectations
@@ -48,45 +47,41 @@ export const MexicoMap = () => {
           center: [-103.4068, 25.5428], // Centrado en Torreón
         }}
       >
-        <ZoomableGroup zoom={1}>
-          <Geographies geography={geoUrl}>
-            {({ geographies }) =>
-              geographies.map((geo) => (
-                <Geography
-                  key={geo.rsmKey}
-                  geography={geo}
-                  className="fill-white stroke-border"
-                  strokeWidth={1}
-                  style={{
-                    default: { outline: "none" },
-                    hover: { fill: "#f3f3f3", outline: "none" },
-                    pressed: { outline: "none" },
-                  }}
-                />
-              ))
-            }
-          </Geographies>
-
-          {/* Solo el marcador de Torreón */}
-          <Marker coordinates={torreon.coordinates}>
-            <g transform="translate(-12, -24)">
-              <ArleLogo />
-              <text
-                textAnchor="middle"
-                y={36}
-                x={12}
+        <Geographies geography={geoUrl}>
+          {({ geographies }) =>
+            geographies.map((geo) => (
+              <Geography
+                key={geo.rsmKey}
+                geography={geo}
+                className="fill-[#FAE7DA] stroke-[#FFBB8E]"
+                strokeWidth={1}
                 style={{
-                  fontFamily: "system-ui",
-                  fontSize: "10px",
-                  fontWeight: "bold",
-                  fill: "#1f2937",
+                  default: { outline: "none" },
                 }}
-              >
-                {torreon.name}
-              </text>
-            </g>
-          </Marker>
-        </ZoomableGroup>
+              />
+            ))
+          }
+        </Geographies>
+
+        {/* Solo el marcador de Torreón */}
+        <Marker coordinates={torreon.coordinates}>
+          <g transform="translate(-12, -24)">
+            <ArleLogo />
+            <text
+              textAnchor="middle"
+              y={36}
+              x={12}
+              style={{
+                fontFamily: "system-ui",
+                fontSize: "10px",
+                fontWeight: "bold",
+                fill: "#1f2937",
+              }}
+            >
+              {torreon.name}
+            </text>
+          </g>
+        </Marker>
       </ComposableMap>
     </div>
   );
