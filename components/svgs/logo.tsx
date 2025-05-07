@@ -60,3 +60,5 @@ export const IconArle = (props: React.SVGProps<SVGSVGElement>) => (
     />
   </svg>
 );
+
+Logo.displayName = "Logo";

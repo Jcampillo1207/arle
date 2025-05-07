@@ -52,7 +52,11 @@ export const Section4About = () => {
       </BlurFade>
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
         {items.map((item) => (
-          <BlurFade inView delay={0 + items.indexOf(item) * 0.1}>
+          <BlurFade
+            key={item.label}
+            inView
+            delay={0 + items.indexOf(item) * 0.1}
+          >
             <div
               className={cn(
                 "w-full flex flex-1 lg:items-start !justify-between flex-row-reverse lg:flex-col p-3 !h-auto !px-3 lg:p-5 gap-y-3",
