@@ -21,7 +21,7 @@ export interface LogoProps
     VariantProps<typeof logoVariants> {}
 
 export const Logo = React.forwardRef<SVGSVGElement, LogoProps>(
-  ({ variant, className, ...props }, ref) => {
+  ({ variant, className, ...props }) => {
     return (
       <svg
         className={cn(
