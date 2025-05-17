@@ -32,15 +32,15 @@ const links = [
         items: [
           {
             title: "Construcción Residencial",
-            href: "/services/construction#residential",
+            href: "/services#residential",
           },
           {
             title: "Construcción Comercial",
-            href: "/services/construction#commercial",
+            href: "/services#commercial",
           },
           {
             title: "Construcción Industrial",
-            href: "/services/construction#industrial",
+            href: "/services#industrial",
           },
         ],
       },

@@ -1,21 +1,19 @@
-import Image from "next/image";
-import { ServiceSectionUniversal } from "./_components/atoms/service-section-universal";
-import { HeroServices } from "./_components/hero-services";
 import {
-  ArrowRight,
+  Building2,
+  CircuitBoard,
+  Construction,
   FileAxis3D,
   FolderCheckIcon,
-  Scroll,
-  Wrench,
-  CircuitBoard,
-  Building2,
-  Ruler,
-  Construction,
   LampDesk,
   Paintbrush2,
   PanelTop,
+  Ruler,
+  Scroll,
+  Wrench,
 } from "lucide-react";
-import Link from "next/link";
+import Image from "next/image";
+import { ServiceSectionUniversal } from "./_components/atoms/service-section-universal";
+import { HeroServices } from "./_components/hero-services";
 
 const constructionSubServices = [
   {
@@ -23,21 +21,21 @@ const constructionSubServices = [
     description:
       "Desarrollamos viviendas personalizadas, funcionales y seguras que reflejan el estilo de vida de cada cliente. Cuidamos cada detalle, desde los cimientos hasta los acabados.",
     image: "/res-construction.jpg",
-    href: "/services/construction#residential",
+    id: "residential",
   },
   {
     title: "Construcción Comercial",
     description:
       "Creamos espacios comerciales que combinan diseño, funcionalidad y experiencia del usuario, optimizando el flujo de trabajo y el impacto visual del negocio.",
     image: "/com-construction.png",
-    href: "/services/construction#commercial",
+    id: "commercial",
   },
   {
     title: "Construcción Industrial",
     description:
       "Ejecutamos naves, plantas y espacios industriales bajo estrictos estándares de ingeniería, seguridad y eficiencia operativa, adaptándonos a cualquier tipo de industria.",
     image: "/ind-construction.jpg",
-    href: "/services/construction#industrial",
+    id: "industrial",
   },
 ];
 
@@ -52,28 +50,41 @@ const AboutPage = () => {
         description="Ejecutamos proyectos de construcción con altos estándares de calidad, cuidando cada detalle desde la planeación hasta la entrega. Ya sea obra nueva, remodelación o adecuaciones, nuestro equipo garantiza soluciones seguras, funcionales y adaptadas a tus necesidades."
         image="/construction.png"
         reverse={false}
-        href="/services/construction"
         features={[
-          { title: "Residencial", icon: Building2 },
-          { title: "Comercial", icon: PanelTop },
-          { title: "Industrial", icon: Construction },
-          { title: "Supervisión de obra", icon: FolderCheckIcon },
-          { title: "Seguridad estructural", icon: Ruler },
+          {
+            title: "Residencial",
+            icon: <Building2 className="size-3.5 text-primary" />,
+          },
+          {
+            title: "Comercial",
+            icon: <PanelTop className="size-3.5 text-primary" />,
+          },
+          {
+            title: "Industrial",
+            icon: <Construction className="size-3.5 text-primary" />,
+          },
+          {
+            title: "Supervisión de obra",
+            icon: <FolderCheckIcon className="size-3.5 text-primary" />,
+          },
+          {
+            title: "Seguridad estructural",
+            icon: <Ruler className="size-3.5 text-primary" />,
+          },
         ]}
       >
         <div className="w-full h-fit grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-7">
           {constructionSubServices.map((item) => (
-            <Link
-              href={item.href}
+            <div
               key={item.title}
-              className="w-full items-start justify-between flex flex-col gap-y-3 bg-muted border flex-1 hover:shadow-xl ease-in-out transition-all duration-300"
+              id={item.id}
+              className="w-full items-start justify-between flex flex-col gap-y-3 bg-muted border flex-1 scroll-m-28"
             >
               <span className="flex flex-col gap-y-1 items-start justify-start p-3">
                 <span className="w-full flex items-start justify-between gap-3">
                   <h3 className="text-lg lg:text-xl font-semibold text-foreground tracking-tight">
                     {item.title}
                   </h3>
-                  <ArrowRight className="size-4" />
                 </span>
                 <p className="text-sm lg:text-base text-muted-foreground">
                   {item.description}
@@ -87,7 +98,7 @@ const AboutPage = () => {
                   className="object-cover"
                 />
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </ServiceSectionUniversal>
@@ -99,11 +110,26 @@ const AboutPage = () => {
         image="/architecture.png"
         reverse={true}
         features={[
-          { title: "Planos arquitectónicos", icon: Scroll },
-          { title: "Renders 3D", icon: FileAxis3D },
-          { title: "Entregables digitales", icon: FolderCheckIcon },
-          { title: "Diseño personalizado", icon: Paintbrush2 },
-          { title: "Normativa local", icon: Ruler },
+          {
+            title: "Planos arquitectónicos",
+            icon: <Scroll className="size-3.5 text-primary" />,
+          },
+          {
+            title: "Renders 3D",
+            icon: <FileAxis3D className="size-3.5 text-primary" />,
+          },
+          {
+            title: "Entregables digitales",
+            icon: <FolderCheckIcon className="size-3.5 text-primary" />,
+          },
+          {
+            title: "Diseño personalizado",
+            icon: <Paintbrush2 className="size-3.5 text-primary" />,
+          },
+          {
+            title: "Normativa local",
+            icon: <Ruler className="size-3.5 text-primary" />,
+          },
         ]}
       />
 
@@ -114,11 +140,26 @@ const AboutPage = () => {
         image="/installations.png"
         reverse={false}
         features={[
-          { title: "Eléctricas", icon: CircuitBoard },
-          { title: "Hidrosanitarias", icon: Wrench },
-          { title: "Climatización", icon: PanelTop },
-          { title: "Cableado estructurado", icon: Scroll },
-          { title: "Cumplimiento normativo", icon: FolderCheckIcon },
+          {
+            title: "Eléctricas",
+            icon: <CircuitBoard className="size-3.5 text-primary" />,
+          },
+          {
+            title: "Hidrosanitarias",
+            icon: <Wrench className="size-3.5 text-primary" />,
+          },
+          {
+            title: "Climatización",
+            icon: <PanelTop className="size-3.5 text-primary" />,
+          },
+          {
+            title: "Cableado estructurado",
+            icon: <Scroll className="size-3.5 text-primary" />,
+          },
+          {
+            title: "Cumplimiento normativo",
+            icon: <FolderCheckIcon className="size-3.5 text-primary" />,
+          },
         ]}
       />
 
@@ -129,11 +170,26 @@ const AboutPage = () => {
         image="/engineering.png"
         reverse={true}
         features={[
-          { title: "Cálculo estructural", icon: Ruler },
-          { title: "Ingeniería civil", icon: Building2 },
-          { title: "Memorias de cálculo", icon: Scroll },
-          { title: "Topografía y análisis", icon: FileAxis3D },
-          { title: "Supervisión técnica", icon: FolderCheckIcon },
+          {
+            title: "Cálculo estructural",
+            icon: <Ruler className="size-3.5 text-primary" />,
+          },
+          {
+            title: "Ingeniería civil",
+            icon: <Building2 className="size-3.5 text-primary" />,
+          },
+          {
+            title: "Memorias de cálculo",
+            icon: <Scroll className="size-3.5 text-primary" />,
+          },
+          {
+            title: "Topografía y análisis",
+            icon: <FileAxis3D className="size-3.5 text-primary" />,
+          },
+          {
+            title: "Supervisión técnica",
+            icon: <FolderCheckIcon className="size-3.5 text-primary" />,
+          },
         ]}
       />
 
@@ -144,11 +200,26 @@ const AboutPage = () => {
         image="/executive-projects.png"
         reverse={false}
         features={[
-          { title: "Planificación detallada", icon: Scroll },
-          { title: "Presupuesto y metrados", icon: FolderCheckIcon },
-          { title: "Catálogo de conceptos", icon: FileAxis3D },
-          { title: "Especificaciones técnicas", icon: CircuitBoard },
-          { title: "Listos para construir", icon: PanelTop },
+          {
+            title: "Planificación detallada",
+            icon: <Scroll className="size-3.5 text-primary" />,
+          },
+          {
+            title: "Presupuesto y metrados",
+            icon: <FolderCheckIcon className="size-3.5 text-primary" />,
+          },
+          {
+            title: "Catálogo de conceptos",
+            icon: <FileAxis3D className="size-3.5 text-primary" />,
+          },
+          {
+            title: "Especificaciones técnicas",
+            icon: <CircuitBoard className="size-3.5 text-primary" />,
+          },
+          {
+            title: "Listos para construir",
+            icon: <PanelTop className="size-3.5 text-primary" />,
+          },
         ]}
       />
 
@@ -159,11 +230,26 @@ const AboutPage = () => {
         image="/interiorism.png"
         reverse={true}
         features={[
-          { title: "Diseño de interiores", icon: LampDesk },
-          { title: "Selección de materiales", icon: Paintbrush2 },
-          { title: "Distribución de espacios", icon: Ruler },
-          { title: "Mobiliario y decoración", icon: FolderCheckIcon },
-          { title: "Iluminación ambiental", icon: CircuitBoard },
+          {
+            title: "Diseño de interiores",
+            icon: <LampDesk className="size-3.5 text-primary" />,
+          },
+          {
+            title: "Selección de materiales",
+            icon: <Paintbrush2 className="size-3.5 text-primary" />,
+          },
+          {
+            title: "Distribución de espacios",
+            icon: <Ruler className="size-3.5 text-primary" />,
+          },
+          {
+            title: "Mobiliario y decoración",
+            icon: <FolderCheckIcon className="size-3.5 text-primary" />,
+          },
+          {
+            title: "Iluminación ambiental",
+            icon: <CircuitBoard className="size-3.5 text-primary" />,
+          },
         ]}
       />
     </main>

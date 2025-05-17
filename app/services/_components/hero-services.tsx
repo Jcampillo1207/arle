@@ -30,12 +30,9 @@ export const HeroServices = () => {
         </div>
         <div className="w-full h-fit items-center justify-center flex gap-2">
           <Button variant={"default"} asChild>
-            <Link href={"/#services"}>
-              Nuestros servicios <ArrowRight className="ml-2 h-4 w-4" />
+            <Link href={"/contact"}>
+              Contáctanos <ArrowRight className=" h-4 w-4" />
             </Link>
-          </Button>
-          <Button variant={"ghost"} asChild className="text-background">
-            <Link href={"/contact"}>Contáctanos</Link>
           </Button>
         </div>
       </div>

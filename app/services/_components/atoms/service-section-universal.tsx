@@ -1,14 +1,17 @@
+"use client";
+
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { ArrowRight, LucideIcon, Plus } from "lucide-react";
+import { ArrowRight, Plus } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import React, { useEffect, useState } from "react";
 
 interface FeaturesProps {
   title: string;
-  icon: LucideIcon;
+  icon: React.ReactNode;
 }
 
 interface ServiceSectionUniversalProps {
@@ -34,6 +37,29 @@ export const ServiceSectionUniversal = ({
   id,
   href,
 }: ServiceSectionUniversalProps) => {
+  // Array of alternative phrases for "Contáctanos"
+  const contactPhrases = [
+    "Contáctanos",
+    "Escríbenos",
+    "Háblanos",
+    "Comunícate con nosotros",
+    "Ponte en contacto",
+    "Envíanos un mensaje",
+    "Cuéntanos tu proyecto",
+    "Solicita información",
+    "Pregúntanos",
+    "Consúltanos",
+  ];
+
+  // Use useState to store the randomly selected phrase
+  const [contactPhrase, setContactPhrase] = useState<string>("");
+
+  // Select a random phrase when the component mounts
+  useEffect(() => {
+    const randomIndex = Math.floor(Math.random() * contactPhrases.length);
+    setContactPhrase(contactPhrases[randomIndex]);
+  }, []);
+
   return (
     <section
       id={id}
@@ -58,23 +84,25 @@ export const ServiceSectionUniversal = ({
             </BlurFade>
             {features && (
               <div className="w-full flex gap-1 flex-wrap items-start justify-start mt-3">
-                {features.map((feature) => (
-                  <BlurFade
-                    key={feature.title}
-                    inView
-                    delay={0.2 + features.indexOf(feature) * 0.1}
-                    direction="right"
-                  >
-                    <Badge
+                {features.map((feature) => {
+                  return (
+                    <BlurFade
                       key={feature.title}
-                      variant={"outline"}
-                      className="pl-1.5 gap-x-1.5 bg-background font-normal text-muted-foreground"
+                      inView
+                      delay={0.2 + features.indexOf(feature) * 0.1}
+                      direction="right"
                     >
-                      <feature.icon className="size-3.5 text-primary" />
-                      {feature.title}
-                    </Badge>
-                  </BlurFade>
-                ))}
+                      <Badge
+                        key={feature.title}
+                        variant={"outline"}
+                        className="pl-1.5 gap-x-1.5 bg-background font-normal text-muted-foreground"
+                      >
+                        {feature.icon}
+                        {feature.title}
+                      </Badge>
+                    </BlurFade>
+                  );
+                })}
               </div>
             )}
           </div>
@@ -82,7 +110,7 @@ export const ServiceSectionUniversal = ({
             <BlurFade inView delay={0.2} direction="right">
               <Button variant={"default"} size={"default"} asChild>
                 <Link href={"/contact"}>
-                  Contáctanos <ArrowRight />
+                  {contactPhrase} <ArrowRight />
                 </Link>
               </Button>
             </BlurFade>
@@ -99,7 +127,12 @@ export const ServiceSectionUniversal = ({
         </div>
         <BlurFade inView delay={0.3} direction="left">
           <div className="w-full h-auto aspect-[4/3] relative overflow-hidden">
-            <Image src={image} alt={title} fill className="object-cover" />
+            <Image
+              src={image || "/placeholder.svg"}
+              alt={title}
+              fill
+              className="object-cover"
+            />
           </div>
         </BlurFade>
       </div>
