@@ -145,23 +145,11 @@ export const Header = () => {
                 <SheetClose asChild>
                   <Button
                     asChild
-                    variant={"ghost"}
-                    size={"lg"}
-                    className="font-medium justify-between px-3"
-                  >
-                    <Link href={"/portafolio"}>
-                      Portafolio <ChevronRight />
-                    </Link>
-                  </Button>
-                </SheetClose>
-                <SheetClose asChild>
-                  <Button
-                    asChild
                     variant={"default"}
                     size={"lg"}
                     className="font-medium justify-between px-3"
                   >
-                    <Link href={"/portafolio"}>
+                    <Link href={"/contact"}>
                       Contáctanos <ArrowRight />
                     </Link>
                   </Button>
