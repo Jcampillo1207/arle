@@ -89,7 +89,7 @@ export const Section10 = () => {
       id="contact"
       className="w-full h-fit scroll-mt-14 items-start justify-start grid grid-cols-1 lg:grid-cols-2 px-5 md:px-7 lg:px-14 xl:px-36 2xl:px-56 py-20 md:py-24 lg:py-28 gap-y-10 lg:gap-y-14 border-t bg-muted"
     >
-      <div className="w-full max-w-2xl mx-auto items-start justify-start flex flex-col gap-y-1.5 lg:sticky top-20">
+      <div className="w-full max-w-2xl mx-auto items-start justify-start flex flex-col gap-y-1.5 lg:sticky top-28">
         <BlurFade inView delay={0}>
           <h2 className="text-3xl md:text-3xl xl:text-4xl font-semibold text-foreground">
             <span className="text-primary">##</span> Hablemos de tu próximo

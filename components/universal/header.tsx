@@ -45,7 +45,7 @@ export const Header = () => {
   return (
     <header
       className={cn(
-        "w-full h-14 items-center justify-between flex py-3 px-5 md:px-7 border-b border-transparent lg:px-14 xl:px-36 2xl:px-56 fixed top-0 z-10",
+        "w-full h-14 items-center justify-between flex py-3 px-5 md:px-7 border-b border-transparent lg:px-14 xl:px-36 2xl:px-56 fixed top-0 z-30",
         "transition-all duration-300 ease-in-out",
         isScrolled && "shadow-md border-border bg-background"
       )}

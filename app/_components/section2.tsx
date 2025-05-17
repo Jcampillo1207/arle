@@ -20,32 +20,32 @@ export const Section2 = () => {
   const services: ServiceProps[] = [
     {
       title: "Construcción",
-      href: "/construction",
+      href: "/services#construction",
       image: "/construction.png",
     },
     {
       title: "Diseño arquitectónico",
-      href: "/architecture",
+      href: "/services#architecture",
       image: "/architecture.png",
     },
     {
       title: "Instalaciones",
-      href: "/installations",
+      href: "/services#installation",
       image: "/installations.png",
     },
     {
       title: "Ingeniería",
-      href: "/engineering",
+      href: "/services#engineering",
       image: "/engineering.png",
     },
     {
       title: "Proyectos ejecutivos",
-      href: "/executive-projects",
+      href: "/services#executive-projects",
       image: "/executive-projects.png",
     },
     {
       title: "Interiorismo",
-      href: "/interiorism",
+      href: "/services#interiorism",
       image: "/interiorism.png",
     },
   ];

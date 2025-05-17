@@ -1,42 +1,57 @@
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { MexicoMap } from "@/components/mexico-map";
+import WhatsApp from "@/components/svgs/icons";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MapPinHouse } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import Link from "next/link";
 
-export const Section5 = () => {
+export const Section6About = () => {
   return (
     <section className="w-full h-fit grid grid-cols-1 md:grid-cols-[1.5fr_1fr] lg:grid-cols-2 px-0 md:px-7 lg:px-14 xl:px-36 2xl:px-56 py-20 pb-0 md:py-24 lg:py-28 gap-10 lg:gap-14 bg-muted border-t relative overflow-hidden">
       <div className="w-full flex-1 items-start justify-center flex flex-col gap-y-10 lg:gap-y-14 z-10 px-5 md:px-0">
         <div className="w-full items-start justify-start flex flex-col gap-y-1.5">
           <BlurFade inView delay={0}>
             <h2 className="text-3xl md:text-3xl xl:text-4xl font-semibold text-foreground tracking-tight">
-              <span className="text-primary">##</span> Cobertura nacional de
-              todos nuestros servicios
+              <span className="text-primary">##</span> Presencia en todo México
             </h2>
           </BlurFade>
           <BlurFade inView delay={0.1}>
             <p className="text-sm lg:text-base text-muted-foreground">
-              Operamos en todo el país, ofreciendo nuestros servicios con la
-              misma calidad y compromiso sin importar la ubicación. Desde
-              proyectos locales hasta desarrollos a gran escala, contamos con la
-              infraestructura y el equipo para llevar soluciones profesionales a
-              cualquier parte de México.
+              Construimos donde nos necesites. Nuestro equipo está listo para
+              ejecutar proyectos en cualquier estado de la República Mexicana,
+              adaptándonos a las condiciones locales y asegurando resultados de
+              alto nivel en cada obra.
             </p>
           </BlurFade>
           <BlurFade inView delay={0.2}>
             <span className="w-full h-fit items-start justify-start flex gap-2 mt-3">
-              <p className="text-sm lg:text-base text-muted-foreground">
-                Oficina:
-              </p>
-              <Badge
-                variant={"outline"}
-                className="pl-1.5 gap-x-1.5 bg-background font-normal text-muted-foreground"
+              <Link
+                href={`tel:${process.env.NEXT_PUBLIC_PHONE_NUMBER}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                passHref
               >
-                <MapPinHouse className="size-3.5 text-primary" /> Torreón,
-                Coahuila.
-              </Badge>
+                <Badge
+                  variant={"outline"}
+                  className="pl-1.5 gap-x-1.5 bg-background font-normal text-muted-foreground cursor-pointer"
+                >
+                  <Phone className="size-3.5 text-primary" /> Teléfono
+                </Badge>
+              </Link>
+              <Link
+                href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                passHref
+              >
+                <Badge
+                  variant={"outline"}
+                  className="pl-1.5 gap-x-1.5 bg-background font-normal text-muted-foreground cursor-pointer"
+                >
+                  <WhatsApp className="size-3.5 text-primary" /> Whatsapp
+                </Badge>
+              </Link>
             </span>
           </BlurFade>
         </div>

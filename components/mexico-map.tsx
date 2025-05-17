@@ -11,7 +11,7 @@ type Point = [number, number];
 
 // Mexico GeoJSON
 const geoUrl =
-  "https://raw.githubusercontent.com/angelnmara/geojson/refs/heads/master/mexicoHigh.json";
+  "/mexico.json";
 
 // Solo Torreón como ubicación
 const torreon = {
@@ -57,6 +57,8 @@ export const MexicoMap = () => {
                 strokeWidth={1}
                 style={{
                   default: { outline: "none" },
+                  hover: { outline: "none" },
+                  pressed: { outline: "none" },
                 }}
               />
             ))
@@ -78,7 +80,7 @@ export const MexicoMap = () => {
                 fill: "#1f2937",
               }}
             >
-              {torreon.name}
+              Oficina
             </text>
           </g>
         </Marker>

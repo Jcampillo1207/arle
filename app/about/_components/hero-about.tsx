@@ -30,7 +30,7 @@ export const HeroAbout = () => {
         </div>
         <div className="w-full h-fit items-center justify-center flex gap-2">
           <Button variant={"default"} asChild>
-            <Link href={"/#services"}>
+            <Link href={"/services"}>
               Nuestros servicios <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
