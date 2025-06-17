@@ -42,6 +42,8 @@ export const Header = () => {
     };
   }, []);
 
+  // chore
+
   return (
     <header
       className={cn(
