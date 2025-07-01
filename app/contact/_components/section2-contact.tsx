@@ -1,6 +1,12 @@
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { Button } from "@/components/ui/button";
-import { Facebook, Instagram, Linkedin, Mail, MessageCircle } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Mail,
+  MessageCircle,
+} from "lucide-react";
 import Link from "next/link";
 
 export const Section2Contact = () => {
@@ -16,7 +22,7 @@ export const Section2Contact = () => {
           </BlurFade>
         </div>
         <div className="w-fit h-fit items-center justify-start flex gap-2">
-        <BlurFade inView delay={0.1}>
+          <BlurFade inView delay={0.1}>
             <Button variant={"outline"} size={"default"} asChild>
               <Link target="_blank" href={"/portfolio"}>
                 Whatsapp <MessageCircle className="h-4 w-4" />
@@ -25,22 +31,21 @@ export const Section2Contact = () => {
           </BlurFade>
           <BlurFade inView delay={0.2}>
             <Button variant={"outline"} size={"icon"} asChild>
-              <Link target="_blank" href={"/portfolio"}>
+              <Link
+                target="_blank"
+                href="https://www.instagram.com/arle.construcciones/"
+              >
                 <Instagram className="h-4 w-4" />
               </Link>
             </Button>
           </BlurFade>
           <BlurFade inView delay={0.3}>
             <Button variant={"outline"} size={"icon"} asChild>
-              <Link target="_blank" href={"/portfolio"}>
+              <Link
+                target="_blank"
+                href="https://www.facebook.com/construccionesArle"
+              >
                 <Facebook className="h-4 w-4" />
-              </Link>
-            </Button>
-          </BlurFade>
-          <BlurFade inView delay={0.4}>
-            <Button variant={"outline"} size={"icon"} asChild>
-              <Link target="_blank" href={"/portfolio"}>
-                <Linkedin className="h-4 w-4" />
               </Link>
             </Button>
           </BlurFade>

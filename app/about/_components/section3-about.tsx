@@ -14,28 +14,28 @@ const contentSections = [
     title: "El origen de una pasión constructiva",
     content:
       "ARLE Construcciones nace en 2017 gracias a la visión del Ing. Antonio Ramírez de León, quien desde joven sintió una profunda conexión con el mundo de la construcción. Inspirado por una tradición familiar de dos generaciones en el sector, decide fundar una empresa que combine técnica, estética y funcionalidad en cada proyecto.",
-    image: "/executive-projects.png",
+    image: "/hist-1.png",
   },
   {
     id: 2,
     title: "Construir con propósito",
     content:
       "Desde su inicio, ARLE se ha enfocado en diseñar y ejecutar obras que reflejan las necesidades reales de sus clientes. Nuestra filosofía se basa en construir con propósito: cada espacio debe tener sentido, mejorar la vida de quienes lo habitan y responder a estándares de calidad, funcionalidad y diseño.",
-    image: "/executive-projects.png",
+    image: "/hist-2.png",
   },
   {
     id: 3,
     title: "Consolidación y profesionalismo",
     content:
       "A lo largo de los años, hemos consolidado nuestra presencia en los sectores residencial, comercial e industrial. Nuestro equipo está conformado por profesionales altamente capacitados que comparten una misma visión: trabajar con responsabilidad, ética y un alto nivel de especialización técnica en cada obra.",
-    image: "/executive-projects.png",
+    image: "/hist-3.png",
   },
   {
     id: 4,
     title: "Innovación, sostenibilidad y futuro",
     content:
       "Hoy, ARLE se distingue por integrar innovación y sostenibilidad en cada proyecto. Aplicamos metodologías modernas, utilizamos materiales ecoeficientes y promovemos soluciones tecnológicas que minimizan el impacto ambiental. Nuestro compromiso es construir un futuro mejor para nuestras comunidades y el entorno.",
-    image: "/executive-projects.png",
+    image: "/hist-4.png",
   },
 ];
 
@@ -46,8 +46,8 @@ export const Section3About = () => {
         <div className="w-full items-start justify-start flex flex-col gap-y-1.5">
           <BlurFade inView delay={0}>
             <h2 className="text-3xl md:text-3xl xl:text-4xl font-semibold text-foreground tracking-tight">
-              <span className="text-primary">##</span> Nuestra historia, construida
-              con visión y propósito
+              <span className="text-primary">##</span> Nuestra historia,
+              construida con visión y propósito
             </h2>
           </BlurFade>
           <BlurFade inView delay={0.1}>
@@ -68,7 +68,7 @@ export const Section3About = () => {
             >
               <div className="w-full flex flex-col gap-y-5 lg:gap-y-7 p-3 lg:p-7">
                 <BlurFade inView delay={0}>
-                  <div className="flex-1 aspect-[16/6] relative">
+                  <div className="flex-1 aspect-square md:aspect-[16/6] relative">
                     <Image
                       src={section.image}
                       alt="Historia ARLE"

@@ -20,14 +20,14 @@ const constructionSubServices = [
     title: "Construcción Residencial",
     description:
       "Desarrollamos viviendas personalizadas, funcionales y seguras que reflejan el estilo de vida de cada cliente. Cuidamos cada detalle, desde los cimientos hasta los acabados.",
-    image: "/res-construction.jpg",
+    image: "/res.png",
     id: "residential",
   },
   {
     title: "Construcción Comercial",
     description:
       "Creamos espacios comerciales que combinan diseño, funcionalidad y experiencia del usuario, optimizando el flujo de trabajo y el impacto visual del negocio.",
-    image: "/com-construction.png",
+    image: "/com.png",
     id: "commercial",
   },
   {

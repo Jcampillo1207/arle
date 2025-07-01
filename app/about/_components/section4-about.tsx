@@ -41,9 +41,9 @@ export const Section4About = () => {
   return (
     <section className="w-full h-fit flex flex-col px-5 md:px-7 lg:px-14 xl:px-36 2xl:px-56 py-20 md:py-24 lg:py-28 gap-2 bg-background">
       <BlurFade inView delay={0}>
-        <div className="flex-1 aspect-video lg:aspect-[16/5] relative w-full">
+        <div className="flex-1 aspect-video lg:aspect-[16/7] relative w-full">
           <Image
-            src="/executive-projects.png"
+            src="/abt-sec-4.png"
             alt="About"
             fill
             className="object-cover"

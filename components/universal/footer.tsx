@@ -104,7 +104,10 @@ export default function Footer() {
                         </Link>
                         <ul className=" pl-2">
                           {item.items.map((subItem, index) => (
-                            <li key={index} className="py-2 first:pt-4 last:pb-0 border-l pl-4">
+                            <li
+                              key={index}
+                              className="py-2 first:pt-4 last:pb-0 border-l pl-4"
+                            >
                               <Link
                                 href={subItem.href}
                                 className="text-muted-foreground hover:text-primary block duration-150"
@@ -138,7 +141,7 @@ export default function Footer() {
             reservados.
           </span>
           <div className="order-first flex flex-wrap justify-center gap-4 text-sm md:order-last">
-            <Link
+            {/* <Link
               href="#"
               target="_blank"
               rel="noopener noreferrer"
@@ -157,9 +160,9 @@ export default function Footer() {
                   d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"
                 ></path>
               </svg>
-            </Link>
+            </Link> */}
             <Link
-              href="#"
+              href="https://www.facebook.com/construccionesArle"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -179,7 +182,7 @@ export default function Footer() {
               </svg>
             </Link>
             <Link
-              href="#"
+              href="https://www.instagram.com/arle.construcciones/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
