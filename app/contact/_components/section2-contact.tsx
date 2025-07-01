@@ -3,9 +3,8 @@ import { Button } from "@/components/ui/button";
 import {
   Facebook,
   Instagram,
-  Linkedin,
   Mail,
-  MessageCircle,
+  MessageCircle
 } from "lucide-react";
 import Link from "next/link";
 
